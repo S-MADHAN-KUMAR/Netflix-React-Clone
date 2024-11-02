@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Hero{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.7)), url(https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/7a0bd648-8238-4134-b486-e7ff5cbaa56e/US-en-20230213-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.moreReason div{
+    background: linear-gradient(to right, rgba(17, 0, 112, 0.445), rgba(150, 8, 79, 0.26));
+    min-height: 250px;
+}
+
+.moreReason div svg{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    min-height: 50px;
+    min-width: 50px;
+    min-height: 70px;
+    min-width: 70px;
+}
+
+/* -------------faq---------------- */
+
+.faq {
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.accordion {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.content p{
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-weight: 500px;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="checkbox"]:checked+label+.content {
+    max-height: 600px;
+    padding: 20px 20px;
+}
+
+.accordion input[type="checkbox"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.noscroll{
+    scrollbar-width: none;
+}
